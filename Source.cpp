@@ -14,7 +14,7 @@ int* createMasN(int N, int &tim) {
 	}
 	end = steady_clock::now();
 	result = duration_cast<nanoseconds>(end - start);
-	cout << "Âàø ìàññèâ:\n";
+	cout << "Ğ’Ğ°Ñˆ Ğ¼Ğ°ÑÑĞ¸Ğ²:\n";
 	for (int* i = arr; i != arr + N; i++) {
 		cout << *i << " ";
 	}
@@ -27,7 +27,7 @@ int* createMas(int& el) {
 	int* arr = new int[0];
 	int N;
 	int i = 0;
-	cout << "Íàæìèòå Enter, êîãäà çàêîí÷èòå ââîä ıëåìåíòîâ\n\n";
+	cout << "ĞĞ°Ğ¶Ğ¼Ğ¸Ñ‚Ğµ Enter, ĞºĞ¾Ğ³Ğ´Ğ° Ğ·Ğ°ĞºĞ¾Ğ½Ñ‡Ğ¸Ñ‚Ğµ Ğ²Ğ²Ğ¾Ğ´ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ¾Ğ²\n\n";
 	while (cin >> N) {
 		if (cin.get() == '\n') {
 			break;
@@ -47,11 +47,11 @@ int* createMas(int& el) {
 	delete[] arr;
 	arr = rez;
 	arr[i - 1] = N;
-	cout << "\nÂàø ìàññèâ:\n";
+	cout << "\nĞ’Ğ°Ñˆ Ğ¼Ğ°ÑÑĞ¸Ğ²:\n";
 	for (int j = 0; j < i; j++) {
 		cout << arr[j] << " ";
 	}
-	cout << "\n\n" << "Êîëè÷åñòîâ ıëåìåíòîâ â ìàññèâå: " << i << "\n\n";
+	cout << "\n\n" << "ĞšĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ¾Ğ² ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ¾Ğ² Ğ² Ğ¼Ğ°ÑÑĞ¸Ğ²Ğµ: " << i << "\n\n";
 	el = i;
 	return arr;
 }
@@ -59,16 +59,16 @@ int* createMas(int& el) {
 int* newElem(int *arr, int &N, int &tim2) {
 	time_point<steady_clock, duration<__int64, ratio<1, 1000000000>>> start, end;
 	nanoseconds result;
-	cout << "Ââåäèòå èíäåêñ íîâîãî ıëåìåíòà:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ¸Ğ½Ğ´ĞµĞºÑ Ğ½Ğ¾Ğ²Ğ¾Ğ³Ğ¾ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ°:\n";
 	int ind;
 	cin >> ind;
 	if (ind > N || ind < 0) {
-		cout << "Äàííûé ıëåìåíò íå ñîîòâåòñòâóåò ïğàâèëüíîé ğàçìåğíîñòè ìàññèâà\n";
+		cout << "Ğ”Ğ°Ğ½Ğ½Ñ‹Ğ¹ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚ Ğ½Ğµ ÑĞ¾Ğ¾Ñ‚Ğ²ĞµÑ‚ÑÑ‚Ğ²ÑƒĞµÑ‚ Ğ¿Ñ€Ğ°Ğ²Ğ¸Ğ»ÑŒĞ½Ğ¾Ğ¹ Ñ€Ğ°Ğ·Ğ¼ĞµÑ€Ğ½Ğ¾ÑÑ‚Ğ¸ Ğ¼Ğ°ÑÑĞ¸Ğ²Ğ°\n";
 		return arr;
 	}
 	else {
 		int perem;
-		cout << "\nÂâåäèòå íîâûé ıëåìåíò:\n";
+		cout << "\nĞ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ½Ğ¾Ğ²Ñ‹Ğ¹ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚:\n";
 		cin >> perem;
 		start = steady_clock::now();
 		int* rez = new int[N + 1];
@@ -81,12 +81,12 @@ int* newElem(int *arr, int &N, int &tim2) {
 		arr[ind] = perem;
 		end = steady_clock::now();
 		result = duration_cast<nanoseconds>(end - start);
-		cout << "\nÂàø ìàññèâ:\n";
+		cout << "\nĞ’Ğ°Ñˆ Ğ¼Ğ°ÑÑĞ¸Ğ²:\n";
 		for (int j = 0; j < N + 1; j++) {
 			cout << arr[j] << " ";
 		}
 		N = N + 1;
-		cout << "\n\n" << "Êîëè÷åñòîâ ıëåìåíòîâ â ìàññèâå: " << N << "\n\n";
+		cout << "\n\n" << "ĞšĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ¾Ğ² ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ¾Ğ² Ğ² Ğ¼Ğ°ÑÑĞ¸Ğ²Ğµ: " << N << "\n\n";
 		tim2 = result.count();
 		return arr;
 	}
@@ -95,11 +95,11 @@ int* newElem(int *arr, int &N, int &tim2) {
 int* deleteElem_ind(int* arr, int &N, int &tim3) {
 	time_point<steady_clock, duration<__int64, ratio<1, 1000000000>>> start, end;
 	nanoseconds result;
-	cout << "Ââåäèòå èíäåêñ ıëåìåíòà, êîòîğûé õîòèòå óäàëèòü:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ¸Ğ½Ğ´ĞµĞºÑ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ°, ĞºĞ¾Ñ‚Ğ¾Ñ€Ñ‹Ğ¹ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ ÑƒĞ´Ğ°Ğ»Ğ¸Ñ‚ÑŒ:\n";
 	int ind;
 	cin >> ind;
 	if (ind > N - 1 || ind < 0) {
-		cout << "Äàííûé ıëåìåíò íå ñîîòâåòñòâóåò ïğàâèëüíîé ğàçìåğíîñòè ìàññèâà\n";
+		cout << "Ğ”Ğ°Ğ½Ğ½Ñ‹Ğ¹ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚ Ğ½Ğµ ÑĞ¾Ğ¾Ñ‚Ğ²ĞµÑ‚ÑÑ‚Ğ²ÑƒĞµÑ‚ Ğ¿Ñ€Ğ°Ğ²Ğ¸Ğ»ÑŒĞ½Ğ¾Ğ¹ Ñ€Ğ°Ğ·Ğ¼ĞµÑ€Ğ½Ğ¾ÑÑ‚Ğ¸ Ğ¼Ğ°ÑÑĞ¸Ğ²Ğ°\n";
 		return arr;
 	}
 	else {
@@ -113,19 +113,19 @@ int* deleteElem_ind(int* arr, int &N, int &tim3) {
 		arr = rez;
 		end = steady_clock::now();
 		result = duration_cast<nanoseconds>(end - start);
-		cout << "\nÂàø ìàññèâ:\n";
+		cout << "\nĞ’Ğ°Ñˆ Ğ¼Ğ°ÑÑĞ¸Ğ²:\n";
 		for (int j = 0; j < N - 1; j++) {
 			cout << arr[j] << " ";
 		}
 		N = N - 1;
-		cout << "\n\n" << "Êîëè÷åñòîâ ıëåìåíòîâ â ìàññèâå: " << N << "\n\n";
+		cout << "\n\n" << "ĞšĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ¾Ğ² ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ¾Ğ² Ğ² Ğ¼Ğ°ÑÑĞ¸Ğ²Ğµ: " << N << "\n\n";
 		tim3 = result.count();
 		return arr;
 	}
 }
 
 int* deleteElem_num(int* arr, int& N) {
-	cout << "Ââåäèòå çíà÷åíèå, êîòîğîå õîòèòå óäàëèòü èç ìàññèâà:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ·Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸Ğµ, ĞºĞ¾Ñ‚Ğ¾Ñ€Ğ¾Ğµ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ ÑƒĞ´Ğ°Ğ»Ğ¸Ñ‚ÑŒ Ğ¸Ğ· Ğ¼Ğ°ÑÑĞ¸Ğ²Ğ°:\n";
 	int ind;
 	cin >> ind;
 	int k = 0;
@@ -140,7 +140,7 @@ int* deleteElem_num(int* arr, int& N) {
 		}
 	}
 	if (k == 0) {
-		cout << "Òàêîãî çíà÷åíèÿ â ìàññèâå íåò\n";
+		cout << "Ğ¢Ğ°ĞºĞ¾Ğ³Ğ¾ Ğ·Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸Ñ Ğ² Ğ¼Ğ°ÑÑĞ¸Ğ²Ğµ Ğ½ĞµÑ‚\n";
 		return arr;
 	}
 	int dop = N;
@@ -160,43 +160,43 @@ int* deleteElem_num(int* arr, int& N) {
 		i++;
 	}
 	delete[] mass;
-	cout << "\nÂàø ìàññèâ:\n";
+	cout << "\nĞ’Ğ°Ñˆ Ğ¼Ğ°ÑÑĞ¸Ğ²:\n";
 	for (int j = 0; j < N; j++) {
 		cout << arr[j] << " ";
 	}
-	cout << "\n\n" << "Êîëè÷åñòîâ ıëåìåíòîâ â ìàññèâå: " << N << "\n\n";
+	cout << "\n\n" << "ĞšĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ¾Ğ² ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ¾Ğ² Ğ² Ğ¼Ğ°ÑÑĞ¸Ğ²Ğµ: " << N << "\n\n";
 	return arr;
 }
 
 int* swapElem(int* arr, int& N) {
-	cout << "Ââåäèòå èíäåêñû ıëåìåíòîâ, êîòîğûå õîòèòå îáìåíÿòü:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ¸Ğ½Ğ´ĞµĞºÑÑ‹ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ¾Ğ², ĞºĞ¾Ñ‚Ğ¾Ñ€Ñ‹Ğµ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ Ğ¾Ğ±Ğ¼ĞµĞ½ÑÑ‚ÑŒ:\n";
 	int num1, num2;
 	cin >> num1;
 	cin >> num2;
 	if (num1 < 0 || num1 >= N || num2 < 0 || num2 >= N) {
-		cout << "İëåìåíòà ñ òàêèì èíäåêñîì íåò\n";
+		cout << "Ğ­Ğ»ĞµĞ¼ĞµĞ½Ñ‚Ğ° Ñ Ñ‚Ğ°ĞºĞ¸Ğ¼ Ğ¸Ğ½Ğ´ĞµĞºÑĞ¾Ğ¼ Ğ½ĞµÑ‚\n";
 		return arr;
 	}
 	int perem = arr[num1];
 	arr[num1] = arr[num2];
 	arr[num2] = perem;
-	cout << "\nÂàø ìàññèâ:\n";
+	cout << "\nĞ’Ğ°Ñˆ Ğ¼Ğ°ÑÑĞ¸Ğ²:\n";
 	for (int j = 0; j < N; j++) {
 		cout << arr[j] << " ";
 	}
-	cout << "\n\n" << "Êîëè÷åñòîâ ıëåìåíòîâ â ìàññèâå: " << N << "\n\n";
+	cout << "\n\n" << "ĞšĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ¾Ğ² ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ¾Ğ² Ğ² Ğ¼Ğ°ÑÑĞ¸Ğ²Ğµ: " << N << "\n\n";
 	return arr;
 }
 
 void searchElem_ind(int* arr, int& N, int &tim4) {
 	time_point<steady_clock, duration<__int64, ratio<1, 1000000000>>> start, end;
 	nanoseconds result;
-	cout << "Ââåäèòå èíäåêñ ıëåìåíòà, ÷òîáû ïîëó÷èòü åãî\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ¸Ğ½Ğ´ĞµĞºÑ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ°, Ñ‡Ñ‚Ğ¾Ğ±Ñ‹ Ğ¿Ğ¾Ğ»ÑƒÑ‡Ğ¸Ñ‚ÑŒ ĞµĞ³Ğ¾\n";
 	int ind;
 	cin >> ind;
 	int res;
 	if (ind < 0 || ind >= N) {
-		cout << "İëåìåíòà ñ òàêèì èíäåêñîì íåò\n";
+		cout << "Ğ­Ğ»ĞµĞ¼ĞµĞ½Ñ‚Ğ° Ñ Ñ‚Ğ°ĞºĞ¸Ğ¼ Ğ¸Ğ½Ğ´ĞµĞºÑĞ¾Ğ¼ Ğ½ĞµÑ‚\n";
 	}
 	else {
 		start = steady_clock::now();
@@ -204,46 +204,46 @@ void searchElem_ind(int* arr, int& N, int &tim4) {
 		end = steady_clock::now();
 		result = duration_cast<nanoseconds>(end - start);
 		tim4 = result.count();
-		cout << "Âàø ıëåìåíò: " << res;
+		cout << "Ğ’Ğ°Ñˆ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚: " << res;
 	}	
 }
 
 void searchElem_num(int* arr, int& N) {
-	cout << "Ââåäèòå çíà÷åíèå, êîòîğîå õîòèòå ïîëó÷èòü:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ·Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸Ğµ, ĞºĞ¾Ñ‚Ğ¾Ñ€Ğ¾Ğµ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ Ğ¿Ğ¾Ğ»ÑƒÑ‡Ğ¸Ñ‚ÑŒ:\n";
 	int ind;
 	cin >> ind;
 	bool flag = false;
 	for (int i = 0; i < N; i++) {
 		if (arr[i] == ind) {
 			flag = true;
-			cout << "Âàø ıëåìåíò ñî çíà÷åíèåì " << ind << " èìååò èíäåêñ: " << i << "\n\n";
+			cout << "Ğ’Ğ°Ñˆ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚ ÑĞ¾ Ğ·Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸ĞµĞ¼ " << ind << " Ğ¸Ğ¼ĞµĞµÑ‚ Ğ¸Ğ½Ğ´ĞµĞºÑ: " << i << "\n\n";
 		}
 	}
 	if (!flag) {
-		cout << "Òàêîãî ıëåìåíòà íåò\n";
+		cout << "Ğ¢Ğ°ĞºĞ¾Ğ³Ğ¾ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ° Ğ½ĞµÑ‚\n";
 	}
 }
 
 int* menu(int *p, int * p2, int * p3, int * p4, int * mas, int &N) {
-	cout << "Ââåäèòå 1, åñëè õîòèòå ñîçäàòü äèíàìè÷åñêèé ìàññèâ, ÷åğåç êîëè÷åñòâî ıëåìåíòîâ:\n";
-	cout << "Ââåäèòå 2, åñëè õîòèòå ñîçäàòü äèíàìè÷åñêèé ìàññèâ, ÷åğåç ââîä ıëåìåíòîâ:\n";
-	cout << "Ââåäèòå 3, åñëè õîòèòå âûâåñòè âğåìÿ ñîçäàíèÿ äèíàìè÷åñêèé ìàññèâ, ÷åğåç êîëè÷åñòâî ıëåìåíòîâ:\n";
-	cout << "Ââåäèòå 4, åñëè õîòèòå äîáàâèòü ıëåìåíò â äèíàìè÷åñêèé ìàññèâ:\n";
-	cout << "Ââåäèòå 5, åñëè õîòèòå âûâåñòè âğåìÿ äîáàâëåíèÿ ıëåìåíòà:\n";
-	cout << "Ââåäèòå 6, åñëè õîòèòå óäàëèòü ıëåìåíò èç äèíàìè÷åñêîãî ìàññèâà ïî èíäåêñó:\n";
-	cout << "Ââåäèòå 7, åñëè õîòèòå âûâåñòè âğåìÿ óäàëåíèÿ ıëåìåíòà ïî èíäåêñó:\n";
-	cout << "Ââåäèòå 8, åñëè õîòèòå óäàëèòü ıëåìåíò èç äèíàìè÷åñêîãî ìàññèâà ïî çíà÷åíèş:\n";
-	cout << "Ââåäèòå 9, åñëè õîòèòå ïîìåíÿòü ıëåìåíòû ìåñòàìè\n";
-	cout << "Ââåäèòå 10, åñëè õîòèòå ïîëó÷èòü ıëåìåíò ïî èíäåêñó:\n";
-	cout << "Ââåäèòå 11, åñëè õîòèòå óçíàòü âğåìÿ ïîëó÷åíèÿ ıëåìåíò ïî èíäåêñó:\n";
-	cout << "Ââåäèòå 12, åñëè õîòèòå ïîëó÷èòü ıëåìåíò ïî çíà÷åíèş:\n";
-	cout << "Ââåäèòå 0, åñëè õîòèòå âûéòè â îñíîâíîå ìåíş:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 1, ĞµÑĞ»Ğ¸ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ ÑĞ¾Ğ·Ğ´Ğ°Ñ‚ÑŒ Ğ´Ğ¸Ğ½Ğ°Ğ¼Ğ¸Ñ‡ĞµÑĞºĞ¸Ğ¹ Ğ¼Ğ°ÑÑĞ¸Ğ², Ñ‡ĞµÑ€ĞµĞ· ĞºĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ¾Ğ²:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 2, ĞµÑĞ»Ğ¸ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ ÑĞ¾Ğ·Ğ´Ğ°Ñ‚ÑŒ Ğ´Ğ¸Ğ½Ğ°Ğ¼Ğ¸Ñ‡ĞµÑĞºĞ¸Ğ¹ Ğ¼Ğ°ÑÑĞ¸Ğ², Ñ‡ĞµÑ€ĞµĞ· Ğ²Ğ²Ğ¾Ğ´ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ¾Ğ²:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 3, ĞµÑĞ»Ğ¸ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ Ğ²Ñ‹Ğ²ĞµÑÑ‚Ğ¸ Ğ²Ñ€ĞµĞ¼Ñ ÑĞ¾Ğ·Ğ´Ğ°Ğ½Ğ¸Ñ Ğ´Ğ¸Ğ½Ğ°Ğ¼Ğ¸Ñ‡ĞµÑĞºĞ¸Ğ¹ Ğ¼Ğ°ÑÑĞ¸Ğ², Ñ‡ĞµÑ€ĞµĞ· ĞºĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ¾Ğ²:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 4, ĞµÑĞ»Ğ¸ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ Ğ´Ğ¾Ğ±Ğ°Ğ²Ğ¸Ñ‚ÑŒ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚ Ğ² Ğ´Ğ¸Ğ½Ğ°Ğ¼Ğ¸Ñ‡ĞµÑĞºĞ¸Ğ¹ Ğ¼Ğ°ÑÑĞ¸Ğ²:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 5, ĞµÑĞ»Ğ¸ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ Ğ²Ñ‹Ğ²ĞµÑÑ‚Ğ¸ Ğ²Ñ€ĞµĞ¼Ñ Ğ´Ğ¾Ğ±Ğ°Ğ²Ğ»ĞµĞ½Ğ¸Ñ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ°:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 6, ĞµÑĞ»Ğ¸ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ ÑƒĞ´Ğ°Ğ»Ğ¸Ñ‚ÑŒ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚ Ğ¸Ğ· Ğ´Ğ¸Ğ½Ğ°Ğ¼Ğ¸Ñ‡ĞµÑĞºĞ¾Ğ³Ğ¾ Ğ¼Ğ°ÑÑĞ¸Ğ²Ğ° Ğ¿Ğ¾ Ğ¸Ğ½Ğ´ĞµĞºÑÑƒ:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 7, ĞµÑĞ»Ğ¸ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ Ğ²Ñ‹Ğ²ĞµÑÑ‚Ğ¸ Ğ²Ñ€ĞµĞ¼Ñ ÑƒĞ´Ğ°Ğ»ĞµĞ½Ğ¸Ñ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ° Ğ¿Ğ¾ Ğ¸Ğ½Ğ´ĞµĞºÑÑƒ:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 8, ĞµÑĞ»Ğ¸ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ ÑƒĞ´Ğ°Ğ»Ğ¸Ñ‚ÑŒ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚ Ğ¸Ğ· Ğ´Ğ¸Ğ½Ğ°Ğ¼Ğ¸Ñ‡ĞµÑĞºĞ¾Ğ³Ğ¾ Ğ¼Ğ°ÑÑĞ¸Ğ²Ğ° Ğ¿Ğ¾ Ğ·Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸Ñ:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 9, ĞµÑĞ»Ğ¸ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ Ğ¿Ğ¾Ğ¼ĞµĞ½ÑÑ‚ÑŒ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ñ‹ Ğ¼ĞµÑÑ‚Ğ°Ğ¼Ğ¸\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 10, ĞµÑĞ»Ğ¸ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ Ğ¿Ğ¾Ğ»ÑƒÑ‡Ğ¸Ñ‚ÑŒ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚ Ğ¿Ğ¾ Ğ¸Ğ½Ğ´ĞµĞºÑÑƒ:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 11, ĞµÑĞ»Ğ¸ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ ÑƒĞ·Ğ½Ğ°Ñ‚ÑŒ Ğ²Ñ€ĞµĞ¼Ñ Ğ¿Ğ¾Ğ»ÑƒÑ‡ĞµĞ½Ğ¸Ñ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚ Ğ¿Ğ¾ Ğ¸Ğ½Ğ´ĞµĞºÑÑƒ:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 12, ĞµÑĞ»Ğ¸ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ Ğ¿Ğ¾Ğ»ÑƒÑ‡Ğ¸Ñ‚ÑŒ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚ Ğ¿Ğ¾ Ğ·Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸Ñ:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 0, ĞµÑĞ»Ğ¸ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ Ğ²Ñ‹Ğ¹Ñ‚Ğ¸ Ğ² Ğ¾ÑĞ½Ğ¾Ğ²Ğ½Ğ¾Ğµ Ğ¼ĞµĞ½Ñ:\n";
 	int perem;
 	cin >> perem;
 	switch (perem) {
 	case 1:
 		system("cls");
-		cout << "Ââåäèòå êîëè÷åñòâî ıëåìåíòîâ:\n";
+		cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ ĞºĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ¾Ğ²:\n";
 		int dop;
 		dop = N;
 		cin >> N;
@@ -254,7 +254,7 @@ int* menu(int *p, int * p2, int * p3, int * p4, int * mas, int &N) {
 			mas = createMasN(N, tim);
 		}
 		else {
-			cout << "Ââåäåíî íåïğàâèëüíîå ÷èñëî\n";
+			cout << "Ğ’Ğ²ĞµĞ´ĞµĞ½Ğ¾ Ğ½ĞµĞ¿Ñ€Ğ°Ğ²Ğ¸Ğ»ÑŒĞ½Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾\n";
 			N = dop;
 		}
 		p = &tim;
@@ -273,10 +273,10 @@ int* menu(int *p, int * p2, int * p3, int * p4, int * mas, int &N) {
 	case 3:
 		system("cls");
 		if (p != 0) {
-			cout << "Âğåìÿ âûïîëíåíèÿ: " << *p << " íñ" << '\n';
+			cout << "Ğ’Ñ€ĞµĞ¼Ñ Ğ²Ñ‹Ğ¿Ğ¾Ğ»Ğ½ĞµĞ½Ğ¸Ñ: " << *p << " Ğ½Ñ" << '\n';
 		}
 		else {
-			cout << "Âû åùå íå ñîçäàëè ìàññèâ\n";
+			cout << "Ğ’Ñ‹ ĞµÑ‰Ğµ Ğ½Ğµ ÑĞ¾Ğ·Ğ´Ğ°Ğ»Ğ¸ Ğ¼Ğ°ÑÑĞ¸Ğ²\n";
 		}
 		system("Pause");
 		system("cls");
@@ -287,7 +287,7 @@ int* menu(int *p, int * p2, int * p3, int * p4, int * mas, int &N) {
 		int tim2;
 		tim2 = 0;
 		if (mas != 0) {
-			cout << "Âàø ìàññèâ:\n";
+			cout << "Ğ’Ğ°Ñˆ Ğ¼Ğ°ÑÑĞ¸Ğ²:\n";
 			for (int i = 0; i < N; i++) {
 				cout << mas[i] << " ";
 			}
@@ -297,7 +297,7 @@ int* menu(int *p, int * p2, int * p3, int * p4, int * mas, int &N) {
 			cout << "\n\n\n";
 		}
 		else {
-			cout << "Ñíà÷àëà ñîçäàéòå ìàññèâ\n";
+			cout << "Ğ¡Ğ½Ğ°Ñ‡Ğ°Ğ»Ğ° ÑĞ¾Ğ·Ğ´Ğ°Ğ¹Ñ‚Ğµ Ğ¼Ğ°ÑÑĞ¸Ğ²\n";
 		}
 		system("Pause");
 		system("cls");
@@ -306,10 +306,10 @@ int* menu(int *p, int * p2, int * p3, int * p4, int * mas, int &N) {
 	case 5:
 		system("cls");
 		if (p2 != 0) {
-			cout << "Âğåìÿ âûïîëíåíèÿ: " << *p2 << " íñ" << '\n';
+			cout << "Ğ’Ñ€ĞµĞ¼Ñ Ğ²Ñ‹Ğ¿Ğ¾Ğ»Ğ½ĞµĞ½Ğ¸Ñ: " << *p2 << " Ğ½Ñ" << '\n';
 		}
 		else {
-			cout << "Âû åùå íå äîáàâëÿëè ıëåìåíò\n";
+			cout << "Ğ’Ñ‹ ĞµÑ‰Ğµ Ğ½Ğµ Ğ´Ğ¾Ğ±Ğ°Ğ²Ğ»ÑĞ»Ğ¸ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚\n";
 		}
 		system("Pause");
 		system("cls");
@@ -320,7 +320,7 @@ int* menu(int *p, int * p2, int * p3, int * p4, int * mas, int &N) {
 		int tim3;
 		tim3 = 0;
 		if (mas != 0) {
-			cout << "Âàø ìàññèâ:\n";
+			cout << "Ğ’Ğ°Ñˆ Ğ¼Ğ°ÑÑĞ¸Ğ²:\n";
 			for (int i = 0; i < N; i++) {
 				cout << mas[i] << " ";
 			}
@@ -330,7 +330,7 @@ int* menu(int *p, int * p2, int * p3, int * p4, int * mas, int &N) {
 			cout << "\n\n\n";
 		}
 		else {
-			cout << "Ñíà÷àëà ñîçäàéòå ìàññèâ\n";
+			cout << "Ğ¡Ğ½Ğ°Ñ‡Ğ°Ğ»Ğ° ÑĞ¾Ğ·Ğ´Ğ°Ğ¹Ñ‚Ğµ Ğ¼Ğ°ÑÑĞ¸Ğ²\n";
 		}
 		system("Pause");
 		system("cls");
@@ -339,10 +339,10 @@ int* menu(int *p, int * p2, int * p3, int * p4, int * mas, int &N) {
 	case 7:
 		system("cls");
 		if (p3 != 0) {
-			cout << "Âğåìÿ âûïîëíåíèÿ: " << *p3 << " íñ" << '\n';
+			cout << "Ğ’Ñ€ĞµĞ¼Ñ Ğ²Ñ‹Ğ¿Ğ¾Ğ»Ğ½ĞµĞ½Ğ¸Ñ: " << *p3 << " Ğ½Ñ" << '\n';
 		}
 		else {
-			cout << "Âû åùå íå óäàëÿëè ıëåìåíò\n";
+			cout << "Ğ’Ñ‹ ĞµÑ‰Ğµ Ğ½Ğµ ÑƒĞ´Ğ°Ğ»ÑĞ»Ğ¸ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚\n";
 		}
 		system("Pause");
 		system("cls");
@@ -351,7 +351,7 @@ int* menu(int *p, int * p2, int * p3, int * p4, int * mas, int &N) {
 	case 8:
 		system("cls");
 		if (mas != 0) {
-			cout << "Âàø ìàññèâ:\n";
+			cout << "Ğ’Ğ°Ñˆ Ğ¼Ğ°ÑÑĞ¸Ğ²:\n";
 			for (int i = 0; i < N; i++) {
 				cout << mas[i] << " ";
 			}
@@ -360,7 +360,7 @@ int* menu(int *p, int * p2, int * p3, int * p4, int * mas, int &N) {
 			cout << "\n\n\n";
 		}
 		else {
-			cout << "Ñíà÷àëà ñîçäàéòå ìàññèâ\n";
+			cout << "Ğ¡Ğ½Ğ°Ñ‡Ğ°Ğ»Ğ° ÑĞ¾Ğ·Ğ´Ğ°Ğ¹Ñ‚Ğµ Ğ¼Ğ°ÑÑĞ¸Ğ²\n";
 		}
 		system("Pause");
 		system("cls");
@@ -369,7 +369,7 @@ int* menu(int *p, int * p2, int * p3, int * p4, int * mas, int &N) {
 	case 9:
 		system("cls");
 		if (mas != 0) {
-			cout << "Âàø ìàññèâ:\n";
+			cout << "Ğ’Ğ°Ñˆ Ğ¼Ğ°ÑÑĞ¸Ğ²:\n";
 			for (int i = 0; i < N; i++) {
 				cout << mas[i] << " ";
 			}
@@ -378,7 +378,7 @@ int* menu(int *p, int * p2, int * p3, int * p4, int * mas, int &N) {
 			cout << "\n\n\n";
 		}
 		else {
-			cout << "Ñíà÷àëà ñîçäàéòå ìàññèâ\n";
+			cout << "Ğ¡Ğ½Ğ°Ñ‡Ğ°Ğ»Ğ° ÑĞ¾Ğ·Ğ´Ğ°Ğ¹Ñ‚Ğµ Ğ¼Ğ°ÑÑĞ¸Ğ²\n";
 		}
 		system("Pause");
 		system("cls");
@@ -389,7 +389,7 @@ int* menu(int *p, int * p2, int * p3, int * p4, int * mas, int &N) {
 		int tim4;
 		tim4 = 0;
 		if (mas != 0) {
-			cout << "Âàø ìàññèâ:\n";
+			cout << "Ğ’Ğ°Ñˆ Ğ¼Ğ°ÑÑĞ¸Ğ²:\n";
 			for (int i = 0; i < N; i++) {
 				cout << mas[i] << " ";
 			}
@@ -399,7 +399,7 @@ int* menu(int *p, int * p2, int * p3, int * p4, int * mas, int &N) {
 			cout << "\n\n\n";
 		}
 		else {
-			cout << "Ñíà÷àëà ñîçäàéòå ìàññèâ\n";
+			cout << "Ğ¡Ğ½Ğ°Ñ‡Ğ°Ğ»Ğ° ÑĞ¾Ğ·Ğ´Ğ°Ğ¹Ñ‚Ğµ Ğ¼Ğ°ÑÑĞ¸Ğ²\n";
 		}
 		system("Pause");
 		system("cls");
@@ -408,10 +408,10 @@ int* menu(int *p, int * p2, int * p3, int * p4, int * mas, int &N) {
 	case 11:
 		system("cls");
 		if (p4 != 0) {
-			cout << "Âğåìÿ âûïîëíåíèÿ: " << *p4 << " íñ" << '\n';
+			cout << "Ğ’Ñ€ĞµĞ¼Ñ Ğ²Ñ‹Ğ¿Ğ¾Ğ»Ğ½ĞµĞ½Ğ¸Ñ: " << *p4 << " Ğ½Ñ" << '\n';
 		}
 		else {
-			cout << "Âû åùå íå ïîëó÷àëè ıëåìåíò\n";
+			cout << "Ğ’Ñ‹ ĞµÑ‰Ğµ Ğ½Ğµ Ğ¿Ğ¾Ğ»ÑƒÑ‡Ğ°Ğ»Ğ¸ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚\n";
 		}
 		system("Pause");
 		system("cls");
@@ -420,7 +420,7 @@ int* menu(int *p, int * p2, int * p3, int * p4, int * mas, int &N) {
 	case 12:
 		system("cls");
 		if (mas != 0) {
-			cout << "Âàø ìàññèâ:\n";
+			cout << "Ğ’Ğ°Ñˆ Ğ¼Ğ°ÑÑĞ¸Ğ²:\n";
 			for (int i = 0; i < N; i++) {
 				cout << mas[i] << " ";
 			}
@@ -429,7 +429,7 @@ int* menu(int *p, int * p2, int * p3, int * p4, int * mas, int &N) {
 			cout << "\n\n\n";
 		}
 		else {
-			cout << "Ñíà÷àëà ñîçäàéòå ìàññèâ\n";
+			cout << "Ğ¡Ğ½Ğ°Ñ‡Ğ°Ğ»Ğ° ÑĞ¾Ğ·Ğ´Ğ°Ğ¹Ñ‚Ğµ Ğ¼Ğ°ÑÑĞ¸Ğ²\n";
 		}
 		system("Pause");
 		system("cls");
@@ -438,7 +438,7 @@ int* menu(int *p, int * p2, int * p3, int * p4, int * mas, int &N) {
 	case 0:
 		return mas;
 	default:
-		cout << "Ââåäåíî íåïğàâèëüíîå ÷èñëî, ïîâòîğèòå ââîä\n\n";
+		cout << "Ğ’Ğ²ĞµĞ´ĞµĞ½Ğ¾ Ğ½ĞµĞ¿Ñ€Ğ°Ğ²Ğ¸Ğ»ÑŒĞ½Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾, Ğ¿Ğ¾Ğ²Ñ‚Ğ¾Ñ€Ğ¸Ñ‚Ğµ Ğ²Ğ²Ğ¾Ğ´\n\n";
 		system("Pause");
 		system("cls");
 		menu(p, p2, p3, p4, mas, N);
@@ -479,7 +479,7 @@ List* createList(int& L) {
 	List* curr = 0, * prev = 0, *start = 0;
 	int N;
 	int i = 0;
-	cout << "Íàæìèòå Enter, êîãäà çàêîí÷èòå ââîä ıëåìåíòîâ\n\n";
+	cout << "ĞĞ°Ğ¶Ğ¼Ğ¸Ñ‚Ğµ Enter, ĞºĞ¾Ğ³Ğ´Ğ° Ğ·Ğ°ĞºĞ¾Ğ½Ñ‡Ğ¸Ñ‚Ğµ Ğ²Ğ²Ğ¾Ğ´ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ¾Ğ²\n\n";
 	while (cin >> N) {
 		if (cin.get() == '\n') {
 			break;
@@ -513,14 +513,14 @@ List* createList(int& L) {
 List* newListelem(List* list, int &L, int &tim2) {
 	time_point<steady_clock, duration<__int64, ratio<1, 1000000000>>> start, end;
 	nanoseconds result;
-	cout << "Ââåäèòå èíäåêñ, â êîòîğûé õîòèòå âñòàâèòü íîâûé ıëåìåíò:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ¸Ğ½Ğ´ĞµĞºÑ, Ğ² ĞºĞ¾Ñ‚Ğ¾Ñ€Ñ‹Ğ¹ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ Ğ²ÑÑ‚Ğ°Ğ²Ğ¸Ñ‚ÑŒ Ğ½Ğ¾Ğ²Ñ‹Ğ¹ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚:\n";
 	int index;
 	cin >> index;
 	if (index < 0 || index > L) {
-		cout << "Äàííûé ıëåìåíò íå ñîîòâåòñòâóåò ïğàâèëüíîé ğàçìåğíîñòè ñïèñêà\n";
+		cout << "Ğ”Ğ°Ğ½Ğ½Ñ‹Ğ¹ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚ Ğ½Ğµ ÑĞ¾Ğ¾Ñ‚Ğ²ĞµÑ‚ÑÑ‚Ğ²ÑƒĞµÑ‚ Ğ¿Ñ€Ğ°Ğ²Ğ¸Ğ»ÑŒĞ½Ğ¾Ğ¹ Ñ€Ğ°Ğ·Ğ¼ĞµÑ€Ğ½Ğ¾ÑÑ‚Ğ¸ ÑĞ¿Ğ¸ÑĞºĞ°\n";
 		return list;
 	}
-	cout << "\n\nÂâåäèòå íîâûé ıëåìåíò:\n";
+	cout << "\n\nĞ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ½Ğ¾Ğ²Ñ‹Ğ¹ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚:\n";
 	int el;
 	cin >> el;
 	start = steady_clock::now();
@@ -558,11 +558,11 @@ List* newListelem(List* list, int &L, int &tim2) {
 List* deleteElemList_ind(List* list, int& L, int& tim3) {
 	time_point<steady_clock, duration<__int64, ratio<1, 1000000000>>> start, end;
 	nanoseconds result;
-	cout << "Ââåäèòå èíäåêñ ıëåìåíòà, êîòîğûé õîòèòå óäàëèòü:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ¸Ğ½Ğ´ĞµĞºÑ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ°, ĞºĞ¾Ñ‚Ğ¾Ñ€Ñ‹Ğ¹ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ ÑƒĞ´Ğ°Ğ»Ğ¸Ñ‚ÑŒ:\n";
 	int ind;
 	cin >> ind;
 	if (ind < 0 || ind >= L) {
-		cout << "Äàííûé ıëåìåíò íå ñîîòâåòñòâóåò ïğàâèëüíîé ğàçìåğíîñòè ñïèñêà\n";
+		cout << "Ğ”Ğ°Ğ½Ğ½Ñ‹Ğ¹ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚ Ğ½Ğµ ÑĞ¾Ğ¾Ñ‚Ğ²ĞµÑ‚ÑÑ‚Ğ²ÑƒĞµÑ‚ Ğ¿Ñ€Ğ°Ğ²Ğ¸Ğ»ÑŒĞ½Ğ¾Ğ¹ Ñ€Ğ°Ğ·Ğ¼ĞµÑ€Ğ½Ğ¾ÑÑ‚Ğ¸ ÑĞ¿Ğ¸ÑĞºĞ°\n";
 		return list;
 	}
 	start = steady_clock::now();
@@ -600,7 +600,7 @@ List* deleteElemList_ind(List* list, int& L, int& tim3) {
 
 List* deleteElemList(List* list, int& L, int ind) {
 	if (ind < 0 || ind >= L) {
-		cout << "Äàííûé ıëåìåíò íå ñîîòâåòñòâóåò ïğàâèëüíîé ğàçìåğíîñòè ñïèñêà\n";
+		cout << "Ğ”Ğ°Ğ½Ğ½Ñ‹Ğ¹ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚ Ğ½Ğµ ÑĞ¾Ğ¾Ñ‚Ğ²ĞµÑ‚ÑÑ‚Ğ²ÑƒĞµÑ‚ Ğ¿Ñ€Ğ°Ğ²Ğ¸Ğ»ÑŒĞ½Ğ¾Ğ¹ Ñ€Ğ°Ğ·Ğ¼ĞµÑ€Ğ½Ğ¾ÑÑ‚Ğ¸ ÑĞ¿Ğ¸ÑĞºĞ°\n";
 		return list;
 	}
 	List* item;
@@ -630,7 +630,7 @@ List* deleteElemList(List* list, int& L, int ind) {
 }
 
 List* deleteElemList_num(List* list, int& L) {
-	cout << "Ââåäèòå çíà÷åíèå, êîòîğîå õîòèòå óäàëèòü èç ñïèñêà:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ·Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸Ğµ, ĞºĞ¾Ñ‚Ğ¾Ñ€Ğ¾Ğµ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ ÑƒĞ´Ğ°Ğ»Ğ¸Ñ‚ÑŒ Ğ¸Ğ· ÑĞ¿Ğ¸ÑĞºĞ°:\n";
 	int num;
 	cin >> num;
 	int k = 0;
@@ -650,7 +650,7 @@ List* deleteElemList_num(List* list, int& L) {
 		ind++;
 	}
 	if (k == 0) {
-		cout << "Òàêîãî çíà÷åíèÿ â ñïèñêå íåò\n";
+		cout << "Ğ¢Ğ°ĞºĞ¾Ğ³Ğ¾ Ğ·Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸Ñ Ğ² ÑĞ¿Ğ¸ÑĞºĞµ Ğ½ĞµÑ‚\n";
 		return list;
 	}
 
@@ -689,16 +689,16 @@ List* listItem(List* list, int index) {
 
 
 List* swapEl(List* list, int &L) {	
-	cout << "Ââåäèòå èíäåêñû ıëåìåíòîâ, êîòîğûå õîòèòå îáìåíÿòü:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ¸Ğ½Ğ´ĞµĞºÑÑ‹ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ¾Ğ², ĞºĞ¾Ñ‚Ğ¾Ñ€Ñ‹Ğµ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ Ğ¾Ğ±Ğ¼ĞµĞ½ÑÑ‚ÑŒ:\n";
 	int num1, num2;
 	cin >> num1;
 	cin >> num2;
 	if (num1 < 0 || num1 >= L || num2 < 0 || num2 >= L) {
-		cout << "İëåìåíòà ñ òàêèì èíäåêñîì íåò\n";
+		cout << "Ğ­Ğ»ĞµĞ¼ĞµĞ½Ñ‚Ğ° Ñ Ñ‚Ğ°ĞºĞ¸Ğ¼ Ğ¸Ğ½Ğ´ĞµĞºÑĞ¾Ğ¼ Ğ½ĞµÑ‚\n";
 		return list;
 	}
 	if (num1 - num2 == 0) {
-		cout << "İëåìåíòû ñîâïàäàşò\n";
+		cout << "Ğ­Ğ»ĞµĞ¼ĞµĞ½Ñ‚Ñ‹ ÑĞ¾Ğ²Ğ¿Ğ°Ğ´Ğ°ÑÑ‚\n";
 		return list;
 	}
 	int temp;
@@ -758,12 +758,12 @@ List* swapEl(List* list, int &L) {
 void searchElemList_ind(List* list, int &L, int& tim4) {
 	time_point<steady_clock, duration<__int64, ratio<1, 1000000000>>> start, end;
 	nanoseconds result;
-	cout << "Ââåäèòå èíäåêñ ıëåìåíòà, ÷òîáû ïîëó÷èòü åãî\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ¸Ğ½Ğ´ĞµĞºÑ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ°, Ñ‡Ñ‚Ğ¾Ğ±Ñ‹ Ğ¿Ğ¾Ğ»ÑƒÑ‡Ğ¸Ñ‚ÑŒ ĞµĞ³Ğ¾\n";
 	int ind;
 	cin >> ind;
 	int res;
 	if (ind < 0 || ind >= L) {
-		cout << "İëåìåíòà ñ òàêèì èíäåêñîì íåò\n";
+		cout << "Ğ­Ğ»ĞµĞ¼ĞµĞ½Ñ‚Ğ° Ñ Ñ‚Ğ°ĞºĞ¸Ğ¼ Ğ¸Ğ½Ğ´ĞµĞºÑĞ¾Ğ¼ Ğ½ĞµÑ‚\n";
 	}
 	else {
 		start = steady_clock::now();
@@ -774,12 +774,12 @@ void searchElemList_ind(List* list, int &L, int& tim4) {
 		end = steady_clock::now();
 		result = duration_cast<nanoseconds>(end - start);
 		tim4 = result.count();
-		cout << "Âàø ıëåìåíò: " << res << "\n\n";
+		cout << "Ğ’Ğ°Ñˆ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚: " << res << "\n\n";
 	}
 }
 
 void searchElemList_num(List* list, int& L) {
-	cout << "Ââåäèòå çíà÷åíèå, êîòîğîå õîòèòå ïîëó÷èòü:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ·Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸Ğµ, ĞºĞ¾Ñ‚Ğ¾Ñ€Ğ¾Ğµ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ Ğ¿Ğ¾Ğ»ÑƒÑ‡Ğ¸Ñ‚ÑŒ:\n";
 	int num;
 	cin >> num;
 	bool flag = false;
@@ -789,38 +789,38 @@ void searchElemList_num(List* list, int& L) {
 	while (curr)
 	{
 		if (curr->data == num) {
-			cout << "Âàø ıëåìåíò ñî çíà÷åíèåì " << num << " èìååò èíäåêñ: " << count << "\n\n";
+			cout << "Ğ’Ğ°Ñˆ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚ ÑĞ¾ Ğ·Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸ĞµĞ¼ " << num << " Ğ¸Ğ¼ĞµĞµÑ‚ Ğ¸Ğ½Ğ´ĞµĞºÑ: " << count << "\n\n";
 			flag = true;
 		}
 		curr = curr->tail;
 		count++;
 	}
 	if (!flag) {
-		cout << "Òàêîãî ıëåìåíòà íåò\n";
+		cout << "Ğ¢Ğ°ĞºĞ¾Ğ³Ğ¾ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ° Ğ½ĞµÑ‚\n";
 	}
 }
 
 
 List* menuList(int* m, int* m2, int* m3, int* m4, List* list, int &L) {
-	cout << "Ââåäèòå 1, åñëè õîòèòå ñîçäàòü äâóñâÿçíûé ñïèñîê, ÷åğåç êîëè÷åñòâî ıëåìåíòîâ:\n";
-	cout << "Ââåäèòå 2, åñëè õîòèòå ñîçäàòü äâóñâÿçíûé ñïèñîê, ÷åğåç ââîä ıëåìåíòîâ:\n";
-	cout << "Ââåäèòå 3, åñëè õîòèòå âûâåñòè âğåìÿ ñîçäàíèÿ äâóñâÿçíîãî ñïèñêà, ÷åğåç êîëè÷åñòâî ıëåìåíòîâ:\n";
-	cout << "Ââåäèòå 4, åñëè õîòèòå äîáàâèòü ıëåìåíò â äâóñâÿçíûé ñïèñîê:\n";
-	cout << "Ââåäèòå 5, åñëè õîòèòå âûâåñòè âğåìÿ äîáàâëåíèÿ ıëåìåíòà:\n";
-	cout << "Ââåäèòå 6, åñëè õîòèòå óäàëèòü ıëåìåíò èç äâóñâÿçíîãî ñïèñêà ïî èíäåêñó:\n";
-	cout << "Ââåäèòå 7, åñëè õîòèòå âûâåñòè âğåìÿ óäàëåíèÿ ıëåìåíòà ïî èíäåêñó:\n";
-	cout << "Ââåäèòå 8, åñëè õîòèòå óäàëèòü ıëåìåíò èç äâóñâÿçíîãî ñïèñêà ïî çíà÷åíèş:\n";
-	cout << "Ââåäèòå 9, åñëè õîòèòå ïîìåíÿòü ıëåìåíòû ìåñòàìè\n";
-	cout << "Ââåäèòå 10, åñëè õîòèòå ïîëó÷èòü ıëåìåíò ïî èíäåêñó:\n";
-	cout << "Ââåäèòå 11, åñëè õîòèòå óçíàòü âğåìÿ ïîëó÷åíèÿ ıëåìåíò ïî èíäåêñó:\n";
-	cout << "Ââåäèòå 12, åñëè õîòèòå ïîëó÷èòü ıëåìåíò ïî çíà÷åíèş:\n";
-	cout << "Ââåäèòå 0, åñëè õîòèòå âûéòè â îñíîâíîå ìåíş:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 1, ĞµÑĞ»Ğ¸ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ ÑĞ¾Ğ·Ğ´Ğ°Ñ‚ÑŒ Ğ´Ğ²ÑƒÑĞ²ÑĞ·Ğ½Ñ‹Ğ¹ ÑĞ¿Ğ¸ÑĞ¾Ğº, Ñ‡ĞµÑ€ĞµĞ· ĞºĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ¾Ğ²:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 2, ĞµÑĞ»Ğ¸ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ ÑĞ¾Ğ·Ğ´Ğ°Ñ‚ÑŒ Ğ´Ğ²ÑƒÑĞ²ÑĞ·Ğ½Ñ‹Ğ¹ ÑĞ¿Ğ¸ÑĞ¾Ğº, Ñ‡ĞµÑ€ĞµĞ· Ğ²Ğ²Ğ¾Ğ´ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ¾Ğ²:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 3, ĞµÑĞ»Ğ¸ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ Ğ²Ñ‹Ğ²ĞµÑÑ‚Ğ¸ Ğ²Ñ€ĞµĞ¼Ñ ÑĞ¾Ğ·Ğ´Ğ°Ğ½Ğ¸Ñ Ğ´Ğ²ÑƒÑĞ²ÑĞ·Ğ½Ğ¾Ğ³Ğ¾ ÑĞ¿Ğ¸ÑĞºĞ°, Ñ‡ĞµÑ€ĞµĞ· ĞºĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ¾Ğ²:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 4, ĞµÑĞ»Ğ¸ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ Ğ´Ğ¾Ğ±Ğ°Ğ²Ğ¸Ñ‚ÑŒ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚ Ğ² Ğ´Ğ²ÑƒÑĞ²ÑĞ·Ğ½Ñ‹Ğ¹ ÑĞ¿Ğ¸ÑĞ¾Ğº:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 5, ĞµÑĞ»Ğ¸ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ Ğ²Ñ‹Ğ²ĞµÑÑ‚Ğ¸ Ğ²Ñ€ĞµĞ¼Ñ Ğ´Ğ¾Ğ±Ğ°Ğ²Ğ»ĞµĞ½Ğ¸Ñ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ°:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 6, ĞµÑĞ»Ğ¸ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ ÑƒĞ´Ğ°Ğ»Ğ¸Ñ‚ÑŒ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚ Ğ¸Ğ· Ğ´Ğ²ÑƒÑĞ²ÑĞ·Ğ½Ğ¾Ğ³Ğ¾ ÑĞ¿Ğ¸ÑĞºĞ° Ğ¿Ğ¾ Ğ¸Ğ½Ğ´ĞµĞºÑÑƒ:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 7, ĞµÑĞ»Ğ¸ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ Ğ²Ñ‹Ğ²ĞµÑÑ‚Ğ¸ Ğ²Ñ€ĞµĞ¼Ñ ÑƒĞ´Ğ°Ğ»ĞµĞ½Ğ¸Ñ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ° Ğ¿Ğ¾ Ğ¸Ğ½Ğ´ĞµĞºÑÑƒ:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 8, ĞµÑĞ»Ğ¸ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ ÑƒĞ´Ğ°Ğ»Ğ¸Ñ‚ÑŒ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚ Ğ¸Ğ· Ğ´Ğ²ÑƒÑĞ²ÑĞ·Ğ½Ğ¾Ğ³Ğ¾ ÑĞ¿Ğ¸ÑĞºĞ° Ğ¿Ğ¾ Ğ·Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸Ñ:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 9, ĞµÑĞ»Ğ¸ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ Ğ¿Ğ¾Ğ¼ĞµĞ½ÑÑ‚ÑŒ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ñ‹ Ğ¼ĞµÑÑ‚Ğ°Ğ¼Ğ¸\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 10, ĞµÑĞ»Ğ¸ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ Ğ¿Ğ¾Ğ»ÑƒÑ‡Ğ¸Ñ‚ÑŒ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚ Ğ¿Ğ¾ Ğ¸Ğ½Ğ´ĞµĞºÑÑƒ:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 11, ĞµÑĞ»Ğ¸ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ ÑƒĞ·Ğ½Ğ°Ñ‚ÑŒ Ğ²Ñ€ĞµĞ¼Ñ Ğ¿Ğ¾Ğ»ÑƒÑ‡ĞµĞ½Ğ¸Ñ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚ Ğ¿Ğ¾ Ğ¸Ğ½Ğ´ĞµĞºÑÑƒ:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 12, ĞµÑĞ»Ğ¸ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ Ğ¿Ğ¾Ğ»ÑƒÑ‡Ğ¸Ñ‚ÑŒ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚ Ğ¿Ğ¾ Ğ·Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸Ñ:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 0, ĞµÑĞ»Ğ¸ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ Ğ²Ñ‹Ğ¹Ñ‚Ğ¸ Ğ² Ğ¾ÑĞ½Ğ¾Ğ²Ğ½Ğ¾Ğµ Ğ¼ĞµĞ½Ñ:\n";
 	int perem;
 	cin >> perem;
 	switch (perem) {
 		case 1:
 			system("cls");
-			cout << "Ââåäèòå êîëè÷åñòâî ıëåìåíòîâ:\n";
+			cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ ĞºĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ¾Ğ²:\n";
 			int dop;
 			dop = L;
 			cin >> L;
@@ -829,7 +829,7 @@ List* menuList(int* m, int* m2, int* m3, int* m4, List* list, int &L) {
 			if (L > 0) {
 				deleteList(list);
 				list = createListL(L, tim);
-				cout << "Âàø ñïèñîê:\n";
+				cout << "Ğ’Ğ°Ñˆ ÑĞ¿Ğ¸ÑĞ¾Ğº:\n";
 				List* curr = 0;
 				curr = list;
 				while (curr)
@@ -840,7 +840,7 @@ List* menuList(int* m, int* m2, int* m3, int* m4, List* list, int &L) {
 				cout << "\n\n";
 			}
 			else {
-				cout << "Ââåäåíî íåïğàâèëüíîå ÷èñëî\n";
+				cout << "Ğ’Ğ²ĞµĞ´ĞµĞ½Ğ¾ Ğ½ĞµĞ¿Ñ€Ğ°Ğ²Ğ¸Ğ»ÑŒĞ½Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾\n";
 				L = dop;
 			}
 			m = &tim;
@@ -852,7 +852,7 @@ List* menuList(int* m, int* m2, int* m3, int* m4, List* list, int &L) {
 			system("cls");
 			deleteList(list);
 			list = createList(L);
-			cout << "Âàø ñïèñîê:\n";
+			cout << "Ğ’Ğ°Ñˆ ÑĞ¿Ğ¸ÑĞ¾Ğº:\n";
 			List* curr;
 			curr = list;
 			while (curr) {
@@ -860,7 +860,7 @@ List* menuList(int* m, int* m2, int* m3, int* m4, List* list, int &L) {
 				curr = curr->tail;
 			}
 			cout << "\n\n";
-			cout << "Êîëè÷åñòâî ıëåìåíòîâ â ñïèñêå: " << L << "\n\n";
+			cout << "ĞšĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚Ğ¾Ğ² Ğ² ÑĞ¿Ğ¸ÑĞºĞµ: " << L << "\n\n";
 			system("Pause");
 			system("cls");
 			menuList(m, m2, m3, m4, list, L);
@@ -868,10 +868,10 @@ List* menuList(int* m, int* m2, int* m3, int* m4, List* list, int &L) {
 		case 3:
 			system("cls");
 			if (m != 0) {
-				cout << "Âğåìÿ âûïîëíåíèÿ: " << *m << " íñ" << '\n';
+				cout << "Ğ’Ñ€ĞµĞ¼Ñ Ğ²Ñ‹Ğ¿Ğ¾Ğ»Ğ½ĞµĞ½Ğ¸Ñ: " << *m << " Ğ½Ñ" << '\n';
 			}
 			else {
-				cout << "Âû åùå íå ñîçäàëè ñïèñîê\n";
+				cout << "Ğ’Ñ‹ ĞµÑ‰Ğµ Ğ½Ğµ ÑĞ¾Ğ·Ğ´Ğ°Ğ»Ğ¸ ÑĞ¿Ğ¸ÑĞ¾Ğº\n";
 			}
 			system("Pause");
 			system("cls");
@@ -882,7 +882,7 @@ List* menuList(int* m, int* m2, int* m3, int* m4, List* list, int &L) {
 			int tim2;
 			tim2 = 0;
 			if (list != 0) {
-				cout << "Âàø ñïèñîê:\n";
+				cout << "Ğ’Ğ°Ñˆ ÑĞ¿Ğ¸ÑĞ¾Ğº:\n";
 				List* curr;
 				curr = list;
 				while (curr) {
@@ -893,7 +893,7 @@ List* menuList(int* m, int* m2, int* m3, int* m4, List* list, int &L) {
 				list = newListelem(list, L, tim2);
 				cout << '\n';
 				m2 = &tim2;
-				cout << "Âàø ñïèñîê:\n";
+				cout << "Ğ’Ğ°Ñˆ ÑĞ¿Ğ¸ÑĞ¾Ğº:\n";
 				curr = list;
 				while (curr)
 				{
@@ -903,7 +903,7 @@ List* menuList(int* m, int* m2, int* m3, int* m4, List* list, int &L) {
 				cout << "\n\n";
 			}
 			else {
-				cout << "Ñíà÷àëà ñîçäàéòå ñïèñîê\n";
+				cout << "Ğ¡Ğ½Ğ°Ñ‡Ğ°Ğ»Ğ° ÑĞ¾Ğ·Ğ´Ğ°Ğ¹Ñ‚Ğµ ÑĞ¿Ğ¸ÑĞ¾Ğº\n";
 			}
 			system("Pause");
 			system("cls");
@@ -912,10 +912,10 @@ List* menuList(int* m, int* m2, int* m3, int* m4, List* list, int &L) {
 		case 5:
 			system("cls");
 			if (m2 != 0) {
-				cout << "Âğåìÿ âûïîëíåíèÿ: " << *m2 << " íñ" << '\n';
+				cout << "Ğ’Ñ€ĞµĞ¼Ñ Ğ²Ñ‹Ğ¿Ğ¾Ğ»Ğ½ĞµĞ½Ğ¸Ñ: " << *m2 << " Ğ½Ñ" << '\n';
 			}
 			else {
-				cout << "Âû åùå íå äîáàâëÿëè ıëåìåíò\n";
+				cout << "Ğ’Ñ‹ ĞµÑ‰Ğµ Ğ½Ğµ Ğ´Ğ¾Ğ±Ğ°Ğ²Ğ»ÑĞ»Ğ¸ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚\n";
 			}
 			system("Pause");
 			system("cls");
@@ -926,7 +926,7 @@ List* menuList(int* m, int* m2, int* m3, int* m4, List* list, int &L) {
 			int tim3;
 			tim3 = 0;
 			if (list != 0) {
-				cout << "Âàø ñïèñîê:\n";
+				cout << "Ğ’Ğ°Ñˆ ÑĞ¿Ğ¸ÑĞ¾Ğº:\n";
 				List* curr;
 				curr = list;
 				while (curr) {
@@ -937,7 +937,7 @@ List* menuList(int* m, int* m2, int* m3, int* m4, List* list, int &L) {
 				list = deleteElemList_ind(list, L, tim3);
 				cout << '\n';
 				m3 = &tim3;
-				cout << "Âàø ñïèñîê:\n";
+				cout << "Ğ’Ğ°Ñˆ ÑĞ¿Ğ¸ÑĞ¾Ğº:\n";
 				curr = list;
 				while (curr)
 				{
@@ -947,7 +947,7 @@ List* menuList(int* m, int* m2, int* m3, int* m4, List* list, int &L) {
 				cout << "\n\n";
 			}
 			else {
-				cout << "Ñíà÷àëà ñîçäàéòå ñïèñîê\n";
+				cout << "Ğ¡Ğ½Ğ°Ñ‡Ğ°Ğ»Ğ° ÑĞ¾Ğ·Ğ´Ğ°Ğ¹Ñ‚Ğµ ÑĞ¿Ğ¸ÑĞ¾Ğº\n";
 			}
 			system("Pause");
 			system("cls");
@@ -956,10 +956,10 @@ List* menuList(int* m, int* m2, int* m3, int* m4, List* list, int &L) {
 		case 7:
 			system("cls");
 			if (m3 != 0) {
-				cout << "Âğåìÿ âûïîëíåíèÿ: " << *m3 << " íñ" << '\n';
+				cout << "Ğ’Ñ€ĞµĞ¼Ñ Ğ²Ñ‹Ğ¿Ğ¾Ğ»Ğ½ĞµĞ½Ğ¸Ñ: " << *m3 << " Ğ½Ñ" << '\n';
 			}
 			else {
-				cout << "Âû åùå íå óäàëÿëè ıëåìåíò\n";
+				cout << "Ğ’Ñ‹ ĞµÑ‰Ğµ Ğ½Ğµ ÑƒĞ´Ğ°Ğ»ÑĞ»Ğ¸ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚\n";
 			}
 			system("Pause");
 			system("cls");
@@ -968,7 +968,7 @@ List* menuList(int* m, int* m2, int* m3, int* m4, List* list, int &L) {
 		case 8:
 			system("cls");
 			if (list != 0) {
-				cout << "Âàø ñïèñîê:\n";
+				cout << "Ğ’Ğ°Ñˆ ÑĞ¿Ğ¸ÑĞ¾Ğº:\n";
 				List* curr;
 				curr = list;
 				while (curr) {
@@ -978,7 +978,7 @@ List* menuList(int* m, int* m2, int* m3, int* m4, List* list, int &L) {
 				cout << "\n\n";
 				list = deleteElemList_num(list, L);
 				cout << '\n';
-				cout << "Âàø ñïèñîê:\n";
+				cout << "Ğ’Ğ°Ñˆ ÑĞ¿Ğ¸ÑĞ¾Ğº:\n";
 				curr = list;
 				while (curr)
 				{
@@ -988,7 +988,7 @@ List* menuList(int* m, int* m2, int* m3, int* m4, List* list, int &L) {
 				cout << "\n\n";
 			}
 			else {
-				cout << "Ñíà÷àëà ñîçäàéòå ñïèñîê\n";
+				cout << "Ğ¡Ğ½Ğ°Ñ‡Ğ°Ğ»Ğ° ÑĞ¾Ğ·Ğ´Ğ°Ğ¹Ñ‚Ğµ ÑĞ¿Ğ¸ÑĞ¾Ğº\n";
 			}
 			system("Pause");
 			system("cls");
@@ -997,7 +997,7 @@ List* menuList(int* m, int* m2, int* m3, int* m4, List* list, int &L) {
 		case 9:
 			system("cls");
 			if (list != 0) {
-				cout << "Âàø ñïèñîê:\n";
+				cout << "Ğ’Ğ°Ñˆ ÑĞ¿Ğ¸ÑĞ¾Ğº:\n";
 				List* curr;
 				curr = list;
 				while (curr) {
@@ -1007,7 +1007,7 @@ List* menuList(int* m, int* m2, int* m3, int* m4, List* list, int &L) {
 				cout << "\n\n";
 				list = swapEl(list, L);
 				cout << '\n';
-				cout << "Âàø ñïèñîê:\n";
+				cout << "Ğ’Ğ°Ñˆ ÑĞ¿Ğ¸ÑĞ¾Ğº:\n";
 				curr = list;
 				while (curr)
 				{
@@ -1017,7 +1017,7 @@ List* menuList(int* m, int* m2, int* m3, int* m4, List* list, int &L) {
 				cout << "\n\n";
 			}
 			else {
-				cout << "Ñíà÷àëà ñîçäàéòå ñïèñîê\n";
+				cout << "Ğ¡Ğ½Ğ°Ñ‡Ğ°Ğ»Ğ° ÑĞ¾Ğ·Ğ´Ğ°Ğ¹Ñ‚Ğµ ÑĞ¿Ğ¸ÑĞ¾Ğº\n";
 			}
 			system("Pause");
 			system("cls");
@@ -1028,7 +1028,7 @@ List* menuList(int* m, int* m2, int* m3, int* m4, List* list, int &L) {
 			int tim4;
 			tim4 = 0;
 			if (list != 0) {
-				cout << "Âàø ñïèñîê:\n";
+				cout << "Ğ’Ğ°Ñˆ ÑĞ¿Ğ¸ÑĞ¾Ğº:\n";
 				List* curr;
 				curr = list;
 				while (curr) {
@@ -1040,7 +1040,7 @@ List* menuList(int* m, int* m2, int* m3, int* m4, List* list, int &L) {
 				m4 = &tim4;
 			}
 			else {
-				cout << "Ñíà÷àëà ñîçäàéòå ñïèñîê\n";
+				cout << "Ğ¡Ğ½Ğ°Ñ‡Ğ°Ğ»Ğ° ÑĞ¾Ğ·Ğ´Ğ°Ğ¹Ñ‚Ğµ ÑĞ¿Ğ¸ÑĞ¾Ğº\n";
 			}
 			system("Pause");
 			system("cls");
@@ -1049,10 +1049,10 @@ List* menuList(int* m, int* m2, int* m3, int* m4, List* list, int &L) {
 		case 11:
 			system("cls");
 			if (m4 != 0) {
-				cout << "Âğåìÿ âûïîëíåíèÿ: " << *m4 << " íñ" << '\n';
+				cout << "Ğ’Ñ€ĞµĞ¼Ñ Ğ²Ñ‹Ğ¿Ğ¾Ğ»Ğ½ĞµĞ½Ğ¸Ñ: " << *m4 << " Ğ½Ñ" << '\n';
 			}
 			else {
-				cout << "Âû åùå íå ïîëó÷àëè ıëåìåíò\n";
+				cout << "Ğ’Ñ‹ ĞµÑ‰Ğµ Ğ½Ğµ Ğ¿Ğ¾Ğ»ÑƒÑ‡Ğ°Ğ»Ğ¸ ÑĞ»ĞµĞ¼ĞµĞ½Ñ‚\n";
 			}
 			system("Pause");
 			system("cls");
@@ -1061,7 +1061,7 @@ List* menuList(int* m, int* m2, int* m3, int* m4, List* list, int &L) {
 		case 12:
 			system("cls");
 			if (list != 0) {
-				cout << "Âàø ñïèñîê:\n";
+				cout << "Ğ’Ğ°Ñˆ ÑĞ¿Ğ¸ÑĞ¾Ğº:\n";
 				List* curr;
 				curr = list;
 				while (curr) {
@@ -1072,7 +1072,7 @@ List* menuList(int* m, int* m2, int* m3, int* m4, List* list, int &L) {
 				searchElemList_num(list, L);
 			}
 			else {
-				cout << "Ñíà÷àëà ñîçäàéòå ñïèñîê\n";
+				cout << "Ğ¡Ğ½Ğ°Ñ‡Ğ°Ğ»Ğ° ÑĞ¾Ğ·Ğ´Ğ°Ğ¹Ñ‚Ğµ ÑĞ¿Ğ¸ÑĞ¾Ğº\n";
 			}
 			system("Pause");
 			system("cls");
@@ -1081,7 +1081,7 @@ List* menuList(int* m, int* m2, int* m3, int* m4, List* list, int &L) {
 		case 0:
 			return list;
 		default:
-			cout << "Ââåäåíî íåïğàâèëüíîå ÷èñëî, ïîâòîğèòå ââîä\n\n";
+			cout << "Ğ’Ğ²ĞµĞ´ĞµĞ½Ğ¾ Ğ½ĞµĞ¿Ñ€Ğ°Ğ²Ğ¸Ğ»ÑŒĞ½Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾, Ğ¿Ğ¾Ğ²Ñ‚Ğ¾Ñ€Ğ¸Ñ‚Ğµ Ğ²Ğ²Ğ¾Ğ´\n\n";
 			system("Pause");
 			system("cls");
 			menuList(m, m2, m3, m4, list, L);
@@ -1097,7 +1097,7 @@ List* idzList(List* list, int& L) {
 		curr->data += rand() % 6;
 		curr = curr->tail;
 	}
-	cout << "Ïğåîáğàçîâàííûé ñïèñîê:\n";
+	cout << "ĞŸÑ€ĞµĞ¾Ğ±Ñ€Ğ°Ğ·Ğ¾Ğ²Ğ°Ğ½Ğ½Ñ‹Ğ¹ ÑĞ¿Ğ¸ÑĞ¾Ğº:\n";
 	curr = list;
 	while (curr)
 	{
@@ -1124,7 +1124,7 @@ int* idz(int* arr, int &N, List* list, int &L) {
 		curr = curr->tail;
 	}
 	
-	cout << "\nÏğåîáğàçîâàííûé ìàññèâ:\n";
+	cout << "\nĞŸÑ€ĞµĞ¾Ğ±Ñ€Ğ°Ğ·Ğ¾Ğ²Ğ°Ğ½Ğ½Ñ‹Ğ¹ Ğ¼Ğ°ÑÑĞ¸Ğ²:\n";
 	for (int i = 0; i < N; i++) {
 		cout << arr[i] << " ";
 	}
@@ -1134,10 +1134,10 @@ int* idz(int* arr, int &N, List* list, int &L) {
 
 
 void menuML(int* p, int* p2, int* p3, int* p4, int* mas, int &N, int* m, int* m2, int* m3, int* m4, List* list, int &L) {
-	cout << "Ââåäèòå 1, åñëè õîòèòå ğàáîòàòü ñ äèíàìè÷åñêèì ìàññèâîì;\n";
-	cout << "Ââåäèòå 2, åñëè õîòèòå ğàáîòàòü ñ äâóñâÿíûì ñïèñêîì;\n";
-	cout << "Ââåäèòå 3, åñëè õîòèòå âûïîëíèòü ÈÄÇ;\n";
-	cout << "Ââåäèòå 0, åñëè õîòèòå âûéòè èç ïğîãğàììû:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 1, ĞµÑĞ»Ğ¸ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ Ñ€Ğ°Ğ±Ğ¾Ñ‚Ğ°Ñ‚ÑŒ Ñ Ğ´Ğ¸Ğ½Ğ°Ğ¼Ğ¸Ñ‡ĞµÑĞºĞ¸Ğ¼ Ğ¼Ğ°ÑÑĞ¸Ğ²Ğ¾Ğ¼;\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 2, ĞµÑĞ»Ğ¸ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ Ñ€Ğ°Ğ±Ğ¾Ñ‚Ğ°Ñ‚ÑŒ Ñ Ğ´Ğ²ÑƒÑĞ²ÑĞ½Ñ‹Ğ¼ ÑĞ¿Ğ¸ÑĞºĞ¾Ğ¼;\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 3, ĞµÑĞ»Ğ¸ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ Ğ²Ñ‹Ğ¿Ğ¾Ğ»Ğ½Ğ¸Ñ‚ÑŒ Ğ˜Ğ”Ğ—;\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 0, ĞµÑĞ»Ğ¸ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ Ğ²Ñ‹Ğ¹Ñ‚Ğ¸ Ğ¸Ğ· Ğ¿Ñ€Ğ¾Ğ³Ñ€Ğ°Ğ¼Ğ¼Ñ‹:\n";
 	int perem;
 	cin >> perem;
 	switch (perem) {
@@ -1155,7 +1155,7 @@ void menuML(int* p, int* p2, int* p3, int* p4, int* mas, int &N, int* m, int* m2
 		break;
 	case 3:
 		system("cls");
-		cout << "Íà÷àëüíûé ñïèñîê:\n";
+		cout << "ĞĞ°Ñ‡Ğ°Ğ»ÑŒĞ½Ñ‹Ğ¹ ÑĞ¿Ğ¸ÑĞ¾Ğº:\n";
 		List* curr;
 		curr = list;
 		while (curr)
@@ -1165,7 +1165,7 @@ void menuML(int* p, int* p2, int* p3, int* p4, int* mas, int &N, int* m, int* m2
 		}
 		cout << "\n\n";
 		list = idzList(list, L);
-		cout << "\nÍà÷àëüíûé ìàññèâ:\n";
+		cout << "\nĞĞ°Ñ‡Ğ°Ğ»ÑŒĞ½Ñ‹Ğ¹ Ğ¼Ğ°ÑÑĞ¸Ğ²:\n";
 		for (int i = 0; i < N; i++) {
 			cout << mas[i] << " ";
 		}
@@ -1178,7 +1178,7 @@ void menuML(int* p, int* p2, int* p3, int* p4, int* mas, int &N, int* m, int* m2
 	case 0:
 		break;
 	default:
-		cout << "Ââåäåíî íåïğàâèëüíîå ÷èñëî, ïîâòîğèòå ââîä\n\n";
+		cout << "Ğ’Ğ²ĞµĞ´ĞµĞ½Ğ¾ Ğ½ĞµĞ¿Ñ€Ğ°Ğ²Ğ¸Ğ»ÑŒĞ½Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾, Ğ¿Ğ¾Ğ²Ñ‚Ğ¾Ñ€Ğ¸Ñ‚Ğµ Ğ²Ğ²Ğ¾Ğ´\n\n";
 		system("Pause");
 		system("cls");
 		menuML(p, p2, p3, p4, mas, N, m, m2, m3, m4, list, L);
